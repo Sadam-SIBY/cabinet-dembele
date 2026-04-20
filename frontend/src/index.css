@@ -1,0 +1,102 @@
+@import '@fontsource/playfair-display/400.css';
+@import '@fontsource/playfair-display/600.css';
+@import '@fontsource/playfair-display/700.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply font-sans text-navy-950 bg-white m-0 antialiased;
+    cursor: none;
+  }
+  /* Rétablir le curseur natif sur tactile */
+  @media (pointer: coarse) {
+    body { cursor: auto; }
+  }
+}
+
+@layer utilities {
+  /* Overflow mask for clip-path-style text reveals */
+  .mask {
+    overflow: hidden;
+    display: block;
+  }
+
+  /* Scroll-triggered transition classes — elegant expo-out easing */
+  .reveal {
+    transition-property: opacity, transform;
+    transition-duration: 900ms;
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal-slow {
+    transition-property: opacity, transform;
+    transition-duration: 1100ms;
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal-img {
+    transition-property: opacity, transform;
+    transition-duration: 1200ms;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  /* Vibration téléphone périodique */
+  @keyframes phone-ring {
+    0%, 100%              { transform: rotate(0deg); }
+    5%                    { transform: rotate(15deg); }
+    10%                   { transform: rotate(-13deg); }
+    15%                   { transform: rotate(11deg); }
+    20%                   { transform: rotate(-9deg); }
+    25%                   { transform: rotate(6deg); }
+    30%                   { transform: rotate(-4deg); }
+    35%                   { transform: rotate(2deg); }
+    40%                   { transform: rotate(0deg); }
+  }
+  .phone-ring {
+    animation: phone-ring 4s ease-in-out infinite;
+    transform-origin: center;
+  }
+
+  /* Respect reduced-motion */
+  @media (prefers-reduced-motion: reduce) {
+    .reveal, .reveal-slow, .reveal-img {
+      transition: none !important;
+    }
+    .animate-slide-up,
+    .animate-fade-rise,
+    .animate-scale-reveal,
+    .animate-line-grow {
+      animation: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+}
+
+@layer components {
+  .section-label {
+    @apply inline-flex items-center gap-2 text-gold-500 font-sans font-semibold text-xs tracking-[0.25em] uppercase mb-4;
+  }
+  .section-title {
+    @apply font-serif font-bold text-navy-950 leading-tight;
+  }
+  .gold-divider {
+    @apply w-16 h-0.5 bg-gold-500 my-6;
+  }
+  .service-card {
+    @apply bg-white border border-gray-100 p-8 shadow-card
+      transition-all duration-300 ease-in-out
+      hover:-translate-y-1.5 hover:shadow-card-hover hover:border-gold-200;
+  }
+  .nav-link {
+    @apply font-sans text-sm font-medium tracking-wide text-white
+      relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-gold-400
+      after:transition-all after:duration-300
+      hover:text-gold-300 hover:after:w-full;
+  }
+}
