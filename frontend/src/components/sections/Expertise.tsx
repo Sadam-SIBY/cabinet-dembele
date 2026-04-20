@@ -41,7 +41,7 @@ export default function Expertise() {
   const { ref, inView } = useInView(0.1)
 
   return (
-    <section id="expertise" className="py-24 lg:py-32 bg-navy-950 relative overflow-hidden">
+    <section id="expertise" className="py-14 md:py-24 lg:py-32 bg-navy-950 relative overflow-hidden">
 
       {/* Fond ponctué — même pattern que l'ancien Hero */}
       <div
@@ -70,7 +70,7 @@ export default function Expertise() {
           {blocs.map((bloc, i) => (
             <article
               key={bloc.acronym}
-              className={`relative overflow-hidden min-h-[420px] flex flex-col justify-end group
+              className={`relative overflow-hidden min-h-[280px] md:min-h-[420px] flex flex-col justify-end group
                 reveal ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
               style={{ transitionDelay: `${i * 120}ms` }}
             >

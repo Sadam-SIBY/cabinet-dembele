@@ -42,7 +42,7 @@ export default function Process() {
   const { ref, inView } = useInView(0.1)
 
   return (
-    <section id="processus" className="py-24 lg:py-32 bg-gray-50 relative overflow-hidden">
+    <section id="processus" className="py-14 md:py-24 lg:py-32 bg-gray-50 relative overflow-hidden">
 
       {/* Motif de fond subtil */}
       <div
@@ -71,7 +71,7 @@ export default function Process() {
         </div>
 
         {/* Steps grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-0 mt-16 relative">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-0 mt-10 md:mt-16 relative divide-y sm:divide-y-0 divide-gray-100">
 
           {/* Ligne de connexion horizontale (desktop) */}
           <div

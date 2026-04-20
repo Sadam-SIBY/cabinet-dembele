@@ -69,12 +69,12 @@ export default function About() {
   })
 
   return (
-    <section id="cabinet" className="py-24 lg:py-32 bg-white overflow-hidden">
+    <section id="cabinet" className="py-14 md:py-24 lg:py-32 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
           {/* ── Gauche : photo + carte flottante ── */}
-          <div className="relative" ref={imgRef}>
+          <div className="relative pb-8 lg:pb-0" ref={imgRef}>
             <div
               className="relative overflow-hidden bg-navy-950 rounded-2xl"
               style={{
@@ -109,7 +109,7 @@ export default function About() {
           <div ref={textRef}>
 
             {/* Points forts — 3 colonnes avec numéro ordinal */}
-            <div className="grid grid-cols-3 gap-6 mb-12">
+            <div className="grid grid-cols-3 gap-2 md:gap-6 mb-8 md:mb-12">
               {STRENGTHS.map(({ label }, i) => (
                 <div
                   key={label}
@@ -135,7 +135,7 @@ export default function About() {
                     </span>
                   </div>
                   {/* Texte */}
-                  <p className="font-serif text-navy-950 text-[0.95rem] leading-snug font-medium">
+                  <p className="font-serif text-navy-950 text-[0.7rem] md:text-[0.95rem] leading-snug font-medium">
                     {label}
                   </p>
                 </div>

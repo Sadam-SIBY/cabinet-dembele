@@ -112,7 +112,7 @@ export default function Actualites() {
   const rest = ARTICLES.slice(1, 4)
 
   return (
-    <section id="actualites" className="py-24 lg:py-32 bg-white">
+    <section id="actualites" className="py-14 md:py-24 lg:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-6">
 
         <div ref={ref} className={`reveal ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -133,7 +133,7 @@ export default function Actualites() {
             style={{ transitionDelay: '80ms' }}
           >
             {/* Texte */}
-            <div className="p-8 lg:p-10 flex flex-col flex-1 justify-between">
+            <div className="p-6 md:p-8 lg:p-10 flex flex-col flex-1 justify-between">
               <div>
                 <div className="flex items-center gap-4 mb-6">
                   <CategoryBadge category={featured.category} />

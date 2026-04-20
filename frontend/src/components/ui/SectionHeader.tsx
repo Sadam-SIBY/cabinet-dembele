@@ -14,7 +14,7 @@ export default function SectionHeader({ label, title, subtitle, light, center }:
         {label}
         <span className="w-8 h-px bg-gold-500 inline-block" />
       </span>
-      <h2 className={`section-title text-4xl lg:text-5xl mb-4 ${light ? 'text-white' : 'text-navy-950'}`}>
+      <h2 className={`section-title text-2xl md:text-4xl lg:text-5xl mb-4 ${light ? 'text-white' : 'text-navy-950'}`}>
         {title}
       </h2>
       {subtitle && (

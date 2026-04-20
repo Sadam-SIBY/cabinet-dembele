@@ -48,7 +48,7 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-3 group">
+        <Link to="/" onClick={() => setOpen(false)} className="flex items-center gap-3 group">
           <img
             src={logoB}
             alt="Cabinet Notarial Dembélé"

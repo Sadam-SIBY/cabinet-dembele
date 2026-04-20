@@ -48,7 +48,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 lg:py-32 bg-white">
+    <section id="contact" className="py-14 md:py-24 lg:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div ref={ref} className={`text-center reveal ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <SectionHeader
@@ -61,8 +61,8 @@ export default function Contact() {
 
         <div className="grid lg:grid-cols-3 gap-10 mt-12">
           {/* ── Info ── */}
-          <div className={`reveal ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`} style={{ transitionDelay: '150ms' }}>
-            <div className="bg-navy-950 p-8 h-full">
+          <div className={`reveal ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '150ms' }}>
+            <div className="bg-navy-950 p-6 md:p-8 h-full">
               <h3 className="font-serif text-white text-xl font-semibold mb-6">Informations du Cabinet</h3>
               <div className="space-y-6">
                 {CONTACT_INFO.map(({ Icon, label, value }) => (
@@ -86,7 +86,7 @@ export default function Contact() {
           </div>
 
           {/* Form */}
-          <div className={`lg:col-span-2 reveal ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`} style={{ transitionDelay: '300ms' }}>
+          <div className={`lg:col-span-2 reveal ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '300ms' }}>
             {status === 'success' ? (
               <div className="h-full flex flex-col items-center justify-center text-center p-12 border border-green-100 bg-green-50">
                 <div className="w-16 h-16 bg-green-100 flex items-center justify-center mb-4">

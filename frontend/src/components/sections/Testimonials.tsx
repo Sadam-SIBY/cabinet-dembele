@@ -7,7 +7,7 @@ export default function Testimonials() {
   const { ref, inView } = useInView(0.1)
 
   return (
-    <section className="py-24 lg:py-32 bg-navy-950 relative overflow-hidden">
+    <section className="py-14 md:py-24 lg:py-32 bg-navy-950 relative overflow-hidden">
 
       {/* Motif de fond subtil */}
       <div

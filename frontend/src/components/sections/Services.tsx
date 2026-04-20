@@ -11,7 +11,7 @@ export default function Services() {
   const { ref, inView } = useInView(0.1)
 
   return (
-    <section id="services" className="py-24 lg:py-32 bg-navy-950 relative overflow-hidden">
+    <section id="services" className="py-14 md:py-24 lg:py-32 bg-navy-950 relative overflow-hidden">
 
       {/* Motif de fond subtil */}
       <div
